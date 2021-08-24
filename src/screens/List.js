@@ -18,8 +18,10 @@ const items = [
   { _id: 3, name: "Seong-uk" },
 ];
 
-const List = () => {
-  const _onPress = (item) => {};
+const List = ({ navigation }) => {
+  const _onPress = (item) => {
+    navigation.navigate("Detail", { id: item._id, name: item.name });
+  };
 
   return (
     <Container>
